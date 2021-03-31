@@ -1,7 +1,8 @@
 #Agente enfrentado a un problema en el que
 #los valores reales de las acciones (q(a))
-#cambian en un tiempo de terminado por la
-#variable timestep_of_change
+#cambian en un tiempo determinado por la
+#variable timestep_of_change. El agente 
+#actualiza sus estimados con 1/n(a).
 
 import numpy as np
 import matplotlib.pyplot as plt
