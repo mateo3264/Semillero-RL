@@ -1,22 +1,25 @@
-#Número variable de cambios de valor de acciones
-#Tabla (o graficos de desempeño según distintos hiperparametros
-# o cambios en el ambiente)
+#Agente enfrentado a un problema en el que
+#los valores reales de las acciones (q(a))
+#cambian en un tiempo de terminado por la
+#variable timestep_of_change
 
 import numpy as np
 import matplotlib.pyplot as plt
 from simple_1_n import run_experiment
 
-np.random.seed(2)
+np.random.seed(3)
 
-K = 5 #número de acciones posibles
+#Número de acciones posibles
+K = 7 #Modificar
 
-epsilon = 0.1
-timesteps = 10_000
+#Probabilidad de explorar
+epsilon = 0.01 #Modificar
 
-timestep_of_change = 500
+#Número total de intentos
+timesteps = 10_000 #Modificar
+
+#En que intento (timestep) se hará el cambio de los valores de las acciones
+timestep_of_change = 1000 #Modificar
 
 
-
-
-run_experiment(epsilon,timesteps,timestep_of_change,n_actions=K)          
-
+run_experiment(epsilon,timesteps,timestep_of_change,n_actions=K)
